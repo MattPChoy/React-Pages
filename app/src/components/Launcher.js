@@ -17,10 +17,11 @@ export default class Launcher extends React.Component {
      * and `launch` url parameters
      */
     componentDidMount() {
+        console.log("launcher")
         SMART.authorize({
             clientId: "my-client-id",
             scope: "launch launch/patient patient/read offline_access",
-            redirectUri: "./app",
+            redirectUri: "./home/",
             iss:
                 "https://launch.smarthealthit.org/v/r3/sim/" +
                 "eyJoIjoiMSIsImIiOiJmMDQ2MjkzNi1lYjRiLTRkYT" +
@@ -41,6 +42,7 @@ export default class Launcher extends React.Component {
      * Could also return `null` for empty page
      */
     render() {
+        console.log("L");
         return "Launching...";
     }
 }
